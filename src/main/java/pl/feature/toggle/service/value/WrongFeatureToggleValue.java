@@ -1,4 +1,4 @@
-package pl.feature.toggle.service.model.exception;
+package pl.feature.toggle.service.value;
 
 import java.util.Collection;
 

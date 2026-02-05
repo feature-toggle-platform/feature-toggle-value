@@ -1,4 +1,4 @@
-package pl.feature.toggle.service.model.featuretoggle.value;
+package pl.feature.toggle.service.value;
 
 
 class FeatureToggleValueRecognizer {

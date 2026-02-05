@@ -1,6 +1,5 @@
-package pl.feature.toggle.service.model.featuretoggle.value;
+package pl.feature.toggle.service.value;
 
-import pl.feature.toggle.service.model.exception.WrongFeatureToggleValue;
 
 import static java.util.Objects.isNull;
 

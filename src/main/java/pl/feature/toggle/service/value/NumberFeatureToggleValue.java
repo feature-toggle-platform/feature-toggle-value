@@ -1,6 +1,4 @@
-package pl.feature.toggle.service.model.featuretoggle.value;
-
-import pl.feature.toggle.service.model.exception.WrongFeatureToggleValue;
+package pl.feature.toggle.service.value;
 
 import java.math.BigDecimal;
 

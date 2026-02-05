@@ -1,6 +1,4 @@
-package pl.feature.toggle.service.model.featuretoggle.value;
-
-import pl.feature.toggle.service.model.exception.UnsupportedFeatureToggleType;
+package pl.feature.toggle.service.value;
 
 record FeatureToggleValueSpec<T>(
         T value,
