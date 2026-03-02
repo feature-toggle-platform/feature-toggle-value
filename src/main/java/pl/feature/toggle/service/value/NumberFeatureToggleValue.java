@@ -25,8 +25,8 @@ record NumberFeatureToggleValue(
         }
     }
 
-    public static FeatureToggleValue create(Number value) {
-        return new NumberFeatureToggleValue(BigDecimal.valueOf(value.doubleValue()));
+    public static NumberFeatureToggleValue create(Number value) {
+        return NumberFeatureToggleValue.create(value.toString());
     }
 
     @Override

@@ -2,7 +2,6 @@ package pl.feature.toggle.service.value;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
-import pl.feature.toggle.service.value.raw.FeatureToggleRawValue;
 
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 public final class FeatureToggleValueBuilder {
@@ -23,11 +22,11 @@ public final class FeatureToggleValueBuilder {
         return FeatureToggleValueRecognizer.from(FeatureToggleValueSpec.create(value));
     }
 
-    public static FeatureToggleValue from(FeatureToggleRawValue rawValue, String type) {
+    public static FeatureToggleValue from(FeatureToggleValueSnapshot rawValue, String type) {
         return FeatureToggleValueRecognizer.from(rawValue.value(), FeatureToggleValueType.valueOf(type));
     }
 
-    public static FeatureToggleValue from(FeatureToggleRawValue rawValue, FeatureToggleValueType type) {
+    public static FeatureToggleValue from(FeatureToggleValueSnapshot rawValue, FeatureToggleValueType type) {
         return FeatureToggleValueRecognizer.from(rawValue.value(), type);
     }
 

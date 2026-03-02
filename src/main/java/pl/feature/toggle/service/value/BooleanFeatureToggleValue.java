@@ -8,17 +8,9 @@ record BooleanFeatureToggleValue(
         boolean value
 ) implements FeatureToggleValue {
 
-    static final String ENABLED_VALUE = "TRUE";
-    static final String DISABLED_VALUE = "FALSE";
-    static final Set<String> ALLOWED_VALUES = Set.of(ENABLED_VALUE, DISABLED_VALUE);
-
-    static BooleanFeatureToggleValue disabled() {
-        return new BooleanFeatureToggleValue(false);
-    }
-
-    static BooleanFeatureToggleValue enabled() {
-        return new BooleanFeatureToggleValue(true);
-    }
+    private static final String ENABLED_VALUE = "TRUE";
+    private static final String DISABLED_VALUE = "FALSE";
+    private static final Set<String> ALLOWED_VALUES = Set.of(ENABLED_VALUE, DISABLED_VALUE);
 
     static BooleanFeatureToggleValue create(String value) {
         if (isNull(value)) {
@@ -31,7 +23,7 @@ record BooleanFeatureToggleValue(
     }
 
     static BooleanFeatureToggleValue create(boolean value) {
-        return new BooleanFeatureToggleValue(value);
+        return BooleanFeatureToggleValue.create(String.valueOf(value));
     }
 
 

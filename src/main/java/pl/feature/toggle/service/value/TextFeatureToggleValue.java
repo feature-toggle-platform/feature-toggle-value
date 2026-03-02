@@ -11,6 +11,9 @@ record TextFeatureToggleValue(
         if (isNull(value)) {
             throw new WrongFeatureToggleValue();
         }
+        if (value.isBlank()){
+            throw new WrongFeatureToggleValue();
+        }
         return new TextFeatureToggleValue(value);
     }
 
