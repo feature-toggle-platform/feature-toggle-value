@@ -75,6 +75,7 @@ class BooleanFeatureToggleValueTest {
         assertThat(featureToggleValue.value()).isTrue();
         assertThat(featureToggleValue.type()).isEqualTo(FeatureToggleValueType.BOOLEAN);
         assertThat(featureToggleValue.asText()).isEqualTo("TRUE");
+        assertThat(featureToggleValue.typedValue()).isEqualTo(Boolean.TRUE);
     }
 
     @Test
@@ -87,5 +88,6 @@ class BooleanFeatureToggleValueTest {
         assertThat(featureToggleValue.value()).isFalse();
         assertThat(featureToggleValue.type()).isEqualTo(FeatureToggleValueType.BOOLEAN);
         assertThat(featureToggleValue.asText()).isEqualTo("FALSE");
+        assertThat(featureToggleValue.typedValue()).isEqualTo(Boolean.FALSE);
     }
 }

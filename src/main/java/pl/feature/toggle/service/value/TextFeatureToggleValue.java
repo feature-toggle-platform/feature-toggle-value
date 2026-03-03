@@ -23,6 +23,11 @@ record TextFeatureToggleValue(
     }
 
     @Override
+    public Object typedValue() {
+        return value;
+    }
+
+    @Override
     public FeatureToggleValueType type() {
         return FeatureToggleValueType.TEXT;
     }

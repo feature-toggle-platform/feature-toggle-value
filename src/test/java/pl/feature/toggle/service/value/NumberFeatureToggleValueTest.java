@@ -55,6 +55,7 @@ class NumberFeatureToggleValueTest {
         assertThat(actual.asText()).isEqualTo(rawValue);
         assertThat(actual.type()).isEqualTo(FeatureToggleValueType.NUMBER);
         assertThat(actual.value()).isEqualTo(new BigDecimal(rawValue));
+        assertThat(actual.typedValue()).isEqualTo(new BigDecimal(rawValue));
     }
 
     @Test
@@ -70,6 +71,7 @@ class NumberFeatureToggleValueTest {
         assertThat(actual.asText()).isEqualTo(number.toString());
         assertThat(actual.type()).isEqualTo(FeatureToggleValueType.NUMBER);
         assertThat(actual.value()).isEqualTo(number);
+        assertThat(actual.typedValue()).isEqualTo(number);
     }
 
 }

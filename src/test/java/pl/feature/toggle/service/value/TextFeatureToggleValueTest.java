@@ -24,6 +24,7 @@ class TextFeatureToggleValueTest {
         assertThat(actual.type()).isEqualTo(FeatureToggleValueType.TEXT);
         assertThat(actual.asText()).isEqualTo(text);
         assertThat(actual.value()).isEqualTo(text);
+        assertThat(actual.typedValue()).isEqualTo(text);
     }
 
     @Test

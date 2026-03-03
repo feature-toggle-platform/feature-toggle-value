@@ -33,6 +33,11 @@ record BooleanFeatureToggleValue(
     }
 
     @Override
+    public Object typedValue() {
+        return value;
+    }
+
+    @Override
     public FeatureToggleValueType type() {
         return FeatureToggleValueType.BOOLEAN;
     }

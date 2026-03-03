@@ -35,6 +35,11 @@ record NumberFeatureToggleValue(
     }
 
     @Override
+    public Object typedValue() {
+        return value;
+    }
+
+    @Override
     public FeatureToggleValueType type() {
         return FeatureToggleValueType.NUMBER;
     }
