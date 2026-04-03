@@ -1,4 +1,4 @@
-package pl.feature.toggle.service.value;
+package com.configly.value;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;

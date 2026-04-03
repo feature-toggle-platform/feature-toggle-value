@@ -1,4 +1,4 @@
-package pl.feature.toggle.service.value;
+package com.configly.value;
 
 record FeatureToggleValueSpec<T>(
         T value,

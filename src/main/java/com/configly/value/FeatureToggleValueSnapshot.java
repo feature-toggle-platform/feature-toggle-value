@@ -1,4 +1,4 @@
-package pl.feature.toggle.service.value;
+package com.configly.value;
 
 public record FeatureToggleValueSnapshot(
         String value
