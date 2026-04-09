@@ -1,4 +1,4 @@
-package com.configly.value;
+package com.configly.value.toggle;
 
 record FeatureToggleValueSpec<T>(
         T value,

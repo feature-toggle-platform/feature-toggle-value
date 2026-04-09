@@ -1,4 +1,4 @@
-package com.configly.value;
+package com.configly.value.toggle;
 
 
 import static java.util.Objects.isNull;

@@ -1,4 +1,4 @@
-package com.configly.value;
+package com.configly.value.toggle;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;

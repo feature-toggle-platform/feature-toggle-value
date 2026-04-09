@@ -1,4 +1,4 @@
-package com.configly.value;
+package com.configly.value.toggle;
 
 public interface FeatureToggleValue {
 

@@ -1,4 +1,4 @@
-package com.configly.value;
+package com.configly.value.toggle;
 
 public enum FeatureToggleValueType {
     BOOLEAN,

@@ -1,29 +1,29 @@
-package com.configly.value;
+package com.configly.value.rule;
 
 import java.util.Set;
 
 import static java.util.Objects.isNull;
 
-record BooleanFeatureToggleValue(
+record BooleanRuleConditionValue(
         boolean value
-) implements FeatureToggleValue {
+) implements RuleConditionValue {
 
     private static final String ENABLED_VALUE = "TRUE";
     private static final String DISABLED_VALUE = "FALSE";
     private static final Set<String> ALLOWED_VALUES = Set.of(ENABLED_VALUE, DISABLED_VALUE);
 
-    static BooleanFeatureToggleValue create(String value) {
+    static BooleanRuleConditionValue create(String value) {
         if (isNull(value)) {
-            throw new WrongFeatureToggleValue();
+            throw new WrongRuleConditionValue();
         }
         if (!ALLOWED_VALUES.contains(value.toUpperCase())) {
-            throw new WrongFeatureToggleValue(value, ALLOWED_VALUES);
+            throw new WrongRuleConditionValue(value, ALLOWED_VALUES);
         }
-        return new BooleanFeatureToggleValue(Boolean.parseBoolean(value));
+        return new BooleanRuleConditionValue(Boolean.parseBoolean(value));
     }
 
-    static BooleanFeatureToggleValue create(boolean value) {
-        return BooleanFeatureToggleValue.create(String.valueOf(value));
+    static BooleanRuleConditionValue create(boolean value) {
+        return BooleanRuleConditionValue.create(String.valueOf(value));
     }
 
 
@@ -38,7 +38,8 @@ record BooleanFeatureToggleValue(
     }
 
     @Override
-    public FeatureToggleValueType type() {
-        return FeatureToggleValueType.BOOLEAN;
+    public RuleConditionValueType type() {
+        return RuleConditionValueType.BOOLEAN;
     }
+
 }
